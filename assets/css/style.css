@@ -752,6 +752,25 @@ section {
   }
 }
 
+.clients .section-header h2 {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+  position: relative;
+}
+
+.clients .section-header h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12%;
+  height: 1px;
+  background-color: #000;
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -981,6 +1000,28 @@ section {
   height: 1px;
   background-color: #000;
 }
+
+.portfolio .section-header h2 {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+  position: relative;
+}
+
+.portfolio .section-header h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12%;
+  height: 1px;
+  background-color: #000;
+}
+
+
+
 
 
 /*--------------------------------------------------------------

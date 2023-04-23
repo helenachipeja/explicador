@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Priço - Explicador</title>
+  <title>Orçamento - Explicador</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -114,63 +114,82 @@
     <div class="orcamento">
       <h4>Tire Suas Dúvidas</h4>
       <p>Seu endereço de e-mail não será publicado. Os campos obrigatórios estão marcados * </p>
-      <form>
+      <form id="formulario">
+        <section style="margin-bottom:40px">
+          <div class="form-row">
+            <div class="form-group ">
+              <label for="inputEmail4">Nome Completo</label>
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Nome Completo">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Email</label>
+              <input type="password" class="form-control" id="inputPassword4" placeholder="nome@exemplo.com">
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputAddress2">Telefone</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="(+258)84271 4985">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputAddress">Empresa</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="informe sua empresa">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputAddress">Cidade</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="informe a sua cidade">
+          </div>
+        </section>
+        <section style="margin-bottom:50px">
+          <div class="width-80-vw text-left text-center" style="margin-bottom:60px">
+            <h4 class="h4">
+                <strong>Sobre seu projeto</strong>
+            </h4>
+            <p>Descreva em detalhes sua idéia para o Aplicativo ou Sistema Web. Precisamos do máximo de informações possiveis.</p>
+        </div>
+        <label class="text-dark" for="contact_message_body" style="font-weight:bold">Escolha para qual plataforma será desenvolvido seu aplicativo</label>
+        <div class="form-row ml-1">
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                    <input name="contact_message[platforms][]" type="checkbox" class="form-check-input" value="ios"/>iOS
+                </div>
+                <div class="form-check form-check-inline">
+                    <input name="contact_message[platforms][]" type="checkbox" class="form-check-input" value="android"/>Android
+                </div>
+                <div class="form-check form-check-inline">
+                    <input name="contact_message[platforms][]" type="checkbox" class="form-check-input" value="web"/>Web
+                </div>
+                <div class="form-check form-check-inline">
+                    <input name="contact_message[platforms][]" type="checkbox" class="form-check-input" value="other"/>Outros
+                </div>
+            </div>
+        </div>
+        <div class="form-group" style="margin-top:15px">
+            <label class="text-dark" for="contact_message_body" style="font-weight:bold">Requisitos Funcionais</label>
+            <textarea style="height:300px" placeholder="Quais funcionalidades, telas, caracteristicas e referências..." rows="4" class="form-control" name="contact_message[body]" id="contact_message_body" required=""></textarea>
+        </div>
+        <div class="form-group" style="margin:35px;margin-left:0">
+            <label class="text-dark" for="contact_message_body" style="font-weight:bold">Anexar Arquivos</label>
+            <br/>
+            <input type="file" name="arquivo_projeto" multiple=""/>
+        </div>
         <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Nome Completo</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Email</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-          </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="text-dark required" for="contact_message_prazo_desenvolvimento" style="font-weight:bold">Estimativa de Prazo para conclusão do projeto</label>
+                    <input class="form-control py-4" placeholder="Em meses" required="" type="number" name="contact_message[prazo_desenvolvimento]" id="contact_message_prazo_desenvolvimento" title="Expectaiva de prazo para que o projeto esteja pronto"/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="text-dark optional" for="contact_message_estimativa_orcamento" style="font-weight:bold">Estimativa de orçamento</label>
+                    <input class="form-control py-4" placeholder="Em Metical" required="" type="number" name="contact_message[estimativa_orcamento]" id="contact_message_estimativa_orcamento" title="Estimativa de custos para o desenvolvimento do projeto"/>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-          <label for="inputAddress">Nome da Empresa</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="form-group">
-          <label for="inputAddress">Tipo de projeto</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="form-group">
-          <label for="inputAddress">Objectivos do projeto</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="form-group">
-          <label for="inputAddress2">Contacto</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="inputState">Prazo</label>
-            <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="form-group col-md-2">
-            <label for="inputZip">Orcamento</label>
-            <input type="text" class="form-control" id="inputZip">
-          </div>
-          <div class="form-group col-md-2">
-            <label for="inputZip">Detalhes Adicionais</label>
-            <input type="text" class="form-control" id="inputZip">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="submit" class="btn btn-primary">Requisitar orçamento</button>
+        </section>
+       
+        
       </form>
 
     </div>
@@ -178,100 +197,6 @@
 
     <!--end orcamento-->
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Pricing</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Pricing</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="box">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-            <div class="box featured">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box">
-              <span class="advanced">Advanced</span>
-              <h3>Ultimate</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section -->
 
       <!-- ======= Frequently Asked Questions Section ======= -->
       <section id="faq" class="faq">
